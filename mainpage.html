@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carbon Craft Catalyst</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./logo.png" alt="Carbon Craft Catalyst Logo" class="logo"> 
+        <h1>Welcome to Carbon Craft Catalyst</h1>
+        <p>Get personalized carbon emission reduction suggestions based on your field of work.</p>
+        <form id="suggestionsForm" onsubmit="return showSuggestions()">
+            <input type="text" placeholder="Your Name" id="name" required>
+            <select id="sector" required>
+                <option value="" disabled selected>Select Your Sector of Work</option>
+                <option value="agriculture">Agriculture</option>
+                <option value="business">Business Firm</option>
+                <option value="fossil-fuel">Fossil Fuel Industry</option>
+                <option value="thermal-power">Thermal Power Plant</option>
+                <option value="manufacturing">Manufacturing Industry</option>
+                <option value="fashion">Fashion Industry</option>
+                <option value="construction">Construction</option>
+                <option value="home-based">Home-Based Firm</option>
+            </select>
+            <button type="submit" >Get Suggestions</button>
+        </form>
+    </div>
+
+    <script>
+        function showSuggestions() {
+            const name = document.getElementById("name").value;
+            const sector = document.getElementById("sector").value;
+
+            if (!name || sector === "") {
+                alert("Please enter your name and select your sector.");
+                return false;
+            } else {
+                if (sector === "agriculture") {
+                window.location.href = 'agriculture.html';
+            } else if (sector === "business") {
+                window.location.href = 'business.html';
+            } else if (sector === "fossil-fuel") {
+                window.location.href = 'fossil-fuel.html';
+            } else if (sector === "thermal-power") {
+                window.location.href = 'thermal-power.html';
+            } else if (sector === "manufacturing") {
+                window.location.href = 'manufacturing.html';
+            } else if (sector === "fashion") {
+                window.location.href = 'fashion.html';
+            } else if (sector === "construction") {
+                window.location.href = 'construction.html';
+            } else if (sector === "home-based") {
+                window.location.href = 'home-based.html';
+            }
+                        return false;
+                }
+            }
+    </script>
+    <footer>This application is in development. Data output will be limited. <li><a href="about us.html">About</a></li></footer>
+</body>
+</html>
